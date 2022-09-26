@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "name": "MAFEX LOKI",
+      "images": "img2.jpg",
+      "price": 91,
+      "quantity": 2,
+      "id": 3
+    },
+    {
+      "name": "MAFEX CAPTAIN ENDGAME",
+      "images": "img3.jpg",
+      "price": 92,
+      "quantity": 2,
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="_ul_checkbox">
+      <ul>
+        <li *ngFor="let checkboxarrays of checkboxArray">
+          <input type="{{checkboxarrays.type}}" value="{{checkboxarrays.prodId}}" (change)="onChange($event)">{{checkboxarrays.price}}
+        </li>
+      </ul>
+    </div>
+</div>
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+<section class="product">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let productArrays of productArray">
+                <div class="box" *ngIf="searchText === '' || productArrays.name.toLowerCase().includes(searchText)">
+                    <div class="product_image">
+                        <img src="{{productArrays.img}}" alt="product1">
+                    </div>
+                    <div class="content">
+                        <p>{{productArrays.name}}</p>
+                        <h4>${{productArrays.price}}</h4>
+                        <button type="button" class="btn" (click)="inc(productArrays)"><i class="fa fa-plus"></i></button>
+                        <span>{{productArrays.quantity}}</span>
+                        <button type="button" class="btn"  (click)="dec(productArrays)"><i class="fa fa-minus"></i></button>
+                    </div>
+                    <button type="button" class="cart_btn" (click)="addCart(productArrays)">Thêm Vào Giỏ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<app-productcrud></app-productcrud>

@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "prodId": 0,
+      "name": "MAFEX MERA",
+      "images": "img4.jpg",
+      "price": 80,
+      "quantity": 3,
+      "id": 1
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "Đặng Quang Minh",
+      "email": "dangquangminhdn86@gmail.com",
+      "password": "Actionfigure1",
+      "mobile": 898479840,
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typiceode"
+  }
+}

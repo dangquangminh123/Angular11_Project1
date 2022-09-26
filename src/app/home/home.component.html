@@ -1,0 +1,597 @@
+<app-header></app-header>
+
+<section class="banner">
+    <owl-carousel-o [options]="bannerSlider">
+      <ng-template carouselSlide>
+          <img src="../../assets/banner/banners1.jpg" alt="banner">
+      </ng-template>  
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners2.jpg" alt="banner">
+      </ng-template>  
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners3.jpg" alt="banner">
+      </ng-template> 
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners4.jpg" alt="banner">
+      </ng-template> 
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners5.jpg" alt="banner">
+      </ng-template> 
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners6.jpg" alt="banner">
+      </ng-template> 
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners7.jpg" alt="banner">
+      </ng-template> 
+      <ng-template carouselSlide>
+        <img src="../../assets/banner/banners8.jpg" alt="banner">
+      </ng-template>  
+    </owl-carousel-o>
+  </section>
+  
+  
+  <section class="best-selling">
+      <div class="containers">
+          <div class="best-selling-container">
+              <div class="sale-price">
+                  Sale <strong>14%</strong>
+              </div>
+              <div class="selling-col-1">
+                  <div class="selling-left">
+                      <ul>
+                          <li>
+                                <span class="count-date">{{days}}</span>
+                                <span class="count-day">Days</span>
+                          </li>
+                          <li>
+                                <span class="count-date">{{hours}}</span>
+                                <span class="count-day">Hours</span>
+                          </li>
+                          <li>
+                                <span class="count-date">{{mins}}</span>
+                                <span class="count-day">Mins</span>
+                          </li>
+                          <li>
+                                <span class="count-date">{{secs}}</span>
+                                <span class="count-day">Secs</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+                <div class="selling-col-2">
+                      <div class="selling-img">
+                          <img src="../../assets/bestselling/bestselling.jpg" alt="bestselling">
+                      </div>
+                </div>
+                <div class="selling-col-3">
+                  <div class="selling-heading">
+                      <a routerLink="/productall">SHFIGUARTS AVENGERS</a>
+                      <div class="selling-rating">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                  <p>
+                    {{content | custompipe}}
+                  </p>
+                  <h3>
+                      <span class="selling-amount">$230.00</span>
+                      <span class="selling-discount">$202</span>
+                  </h3>
+                  <div class="selling-button">
+                      <a routerLink="/productall" class="cart-btn"><i class="fa-solid fa-eye"></i>Xem các sản phẩm khác</a>
+                      <button type="button" class="main-button">
+                        <a href="javascript:void(0);"><i class="fa fa-heart"></i></a>
+                        <a href="javascript:void(0);"><i class="fa fa-search"></i></a>
+                      </button>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="testimonial">
+    <div class="containers">
+        <owl-carousel-o [options]="testimonialSlider">
+          <ng-template carouselSlide>
+              <div class="testimonial-image">
+                  <img src="../../assets/testimonial/icons_captain.png" alt="testimonial">
+              </div>
+              <div class="testimonial-content text-center">
+                  <h2>CAPTAIN AMERICAN</h2>
+                  <h3>SHFIGUARTS</h3>
+                  <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laudantium nesciunt molestiae dolor neque et possimus nihil quam aspernatur temporibus ut cupiditate iste adipisci, porro, cum rem obcaecati vero harum.
+                  </p>
+              </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="testimonial-image">
+                <img src="../../assets/testimonial/icons_ironman.png" alt="testimonial">
+            </div>
+            <div class="testimonial-content">
+                <h2>IRONMAN</h2>
+                <h3>revoltech yamaguchi</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laudantium nesciunt molestiae dolor neque et possimus nihil quam aspernatur temporibus ut cupiditate iste adipisci, porro, cum rem obcaecati vero harum.
+                </p>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="testimonial-image">
+                <img src="../../assets/testimonial/icons_thor.jpg" alt="testimonial">
+            </div>
+            <div class="testimonial-content">
+                <h2>THOR</h2>
+                <h3>MAFEX MEDICOMS TOYS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laudantium nesciunt molestiae dolor neque et possimus nihil quam aspernatur temporibus ut cupiditate iste adipisci, porro, cum rem obcaecati vero harum.
+                </p>
+            </div>
+          </ng-template>     
+        </owl-carousel-o>
+    </div>
+  </section>
+  
+  
+  
+  <section class="bg-color">
+      <div class="containers">
+          <div class="title">
+            <p>The Best Seller Of Hitheme</p>
+            <h1><span>Best</span>Seller</h1>
+            <a routerLink="/productall">View All Products</a>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-main">
+                  <div class="discount">9%</div>
+                    <div class="label label-green">Pre-order </div>
+                    <div class="product-container">
+                      <div class="p" (mouseover)="changeImage1($event)"><img src="../../assets/bestselling/captain_a1.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage1($event)"><img src="../../assets/bestselling/thor_a1.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage1($event)"><img src="../../assets/bestselling/iron_a1.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage1($event)"><img src="../../assets/bestselling/hulk_a1.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage1($event)"><img src="../../assets/bestselling/blackwidow_a1.jpg" alt="Product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url1}}">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                      <ul>
+                        <li><a href=""><i class="fa fa-basket-shopping"></i></a></li>
+                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                        <li><a href=""><i class="fa fa-search"></i></a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="content">
+                  <a routerLink="/productall">SHFIGUARTS AVENGERS 1</a>
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p><span class="money">$280</span><span class="old-price">$160.1</span></p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-main">
+                  <div class="discount">9%</div>
+                    <div class="label label-green">Pre-order </div>
+                    <div class="product-container">
+                      <div class="p" (mouseover)="changeImage2($event)"><img src="../../assets/bestselling/captain_a2.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage2($event)"><img src="../../assets/bestselling/thor_a2.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage2($event)"><img src="../../assets/bestselling/iron_a2.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage2($event)"><img src="../../assets/bestselling/hulk_a2.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage2($event)"><img src="../../assets/bestselling/blackwidow_a2.jpg" alt="Product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url2}}">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                      <ul>
+                        <li><a href=""><i class="fa fa-basket-shopping"></i></a></li>
+                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                        <li><a href=""><i class="fa fa-search"></i></a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="content">
+                  <a routerLink="/productall">SHFIGUARTS AVENGERS 2</a>
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p><span class="money">$280</span><span class="old-price">$160.1</span></p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-main">
+                  <div class="discount">9%</div>
+                    <div class="label label-green">Pre-order </div>
+                    <div class="product-container">
+                      <div class="p" (mouseover)="changeImage3($event)"><img src="../../assets/bestselling/captain_a3.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage3($event)"><img src="../../assets/bestselling/thor_a3.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage3($event)"><img src="../../assets/bestselling/iron_a3.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage3($event)"><img src="../../assets/bestselling/hulk_a3.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage3($event)"><img src="../../assets/bestselling/blackwidow_a3.jpg" alt="Product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url3}}">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                      <ul>
+                        <li><a href=""><i class="fa fa-basket-shopping"></i></a></li>
+                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                        <li><a href=""><i class="fa fa-search"></i></a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="content">
+                  <a routerLink="/productall">SHFIGUARTS AVENGERS 3</a>
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p><span class="money">$290</span><span class="old-price">$190.1</span></p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-main">
+                  <div class="discount">9%</div>
+                    <div class="label label-green">Pre-order </div>
+                    <div class="product-container">
+                      <div class="p" (mouseover)="changeImage4($event)"><img src="../../assets/bestselling/captain_a4.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage4($event)"><img src="../../assets/bestselling/thor_a4.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage4($event)"><img src="../../assets/bestselling/ironman_a4.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage4($event)"><img src="../../assets/bestselling/hulk_a4.jpg" alt="Product"></div>
+                      <div class="p" (mouseover)="changeImage4($event)"><img src="../../assets/bestselling/blackwidow_a4.jpg" alt="Product"></div>
+                    </div>
+                    <div class="image">
+                        <img src="{{url4}}">
+                    </div>
+                    <div class="cart-line"></div>
+                    <div class="cart-item">
+                      <ul>
+                        <li><a href=""><i class="fa fa-basket-shopping"></i></a></li>
+                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                        <li><a href=""><i class="fa fa-search"></i></a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="content">
+                  <a routerLink="/productall">SHFIGUARTS AVENGERS 4</a>
+                  <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p><span class="money">$341</span><span class="old-price">$242.1</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="policy">
+    <div class="containers text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="policy-card">
+                    <div class="round">
+                        <div class="round-icon">
+                            <i class="fa fa-car"></i>
+                        </div>
+                    </div>
+  
+                    <h2>Free Shipping &amp; Return</h2>
+                    <p>Free Shipping on all UK order</p>
+                  </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="policy-card">
+                <div class="round">
+                    <div class="round-icon">
+                        <i class="fa fa-refresh"></i>
+                    </div>
+                </div>
+  
+                <h2>Money back </h2>
+                <p>30 days money back for guardian</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="policy-card">
+                <div class="round">
+                    <div class="round-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                </div>
+  
+                <h2>Online Support 24/24</h2>
+                <p>We support online 24/24 on a day</p>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <section  class="policy-product">
+        <div class="containers">
+          <div class="bg-position">
+            <owl-carousel-o [options]="policyOptions">
+              <ng-template carouselSlide>
+                <div class="policy-p-card">
+                  <div class="date">
+                    <h3>25</h3>
+                    <h4>Jun</h4>
+                  </div>
+                  <div class="policy-img">
+                        <img src="../../assets/policy/1.jpg" alt="P1">
+                  </div>
+                  <h2>Loạt MAFEX MEDICOMTOYS</h2>
+                  <p>MAFEX MEDICOMTOYS là 1 trong những dòng nổi trội về actions figure 1/12, bao hàm rất nhiều mẫu rất đẹp và lạ</p>
+                  <a routerLink="/productall" class="read-more">Xem Nhiều Hơn <i class="fa fa-caret-right"></i></a>
+                </div>
+              </ng-template>  
+              <ng-template carouselSlide>
+                <div class="policy-p-card">
+                  <div class="date">
+                    <h3>25</h3>
+                    <h4>Jun</h4>
+                  </div>
+                  <div class="policy-img">
+                    <img src="../../assets/policy/2.jpg" alt="P2">
+                  </div>
+                  <h2>SPIDER MAN</h2>
+                  <p>SPIDER MAN là nhân vật rất nổi tiếng, vì vậy nhân vật này có rất nhiều dòng figure rất đẹp và đa dạng về nó </p>
+                  <a routerLink="/productall" class="read-more">Xem Nhiều Hơn <i class="fa fa-caret-right"></i></a>
+                </div>
+              </ng-template>  
+              <ng-template carouselSlide>
+                <div class="policy-p-card">
+                  <div class="date">
+                    <h3>25</h3>
+                    <h4>Jun</h4>
+                  </div>
+                  <div class="policy-img">
+                    <img src="../../assets/policy/3.jpg" alt="P1">
+                  </div>
+                  <h2>IRON MAN </h2>
+                  <p>IRON MAN là nhân vật rất nổi tiếng, vì vậy nhân vật này có rất nhiều dòng figure rất đẹp và đa dạng về nó</p>
+                  <a routerLink="/productall" class="read-more">Xem Nhiều Hơn <i class="fa fa-caret-right"></i></a>
+                </div>
+              </ng-template> 
+              <ng-template carouselSlide>
+                <div class="policy-p-card">
+                  <div class="date">
+                    <h3>25</h3>
+                    <h4>Jun</h4>
+                  </div>
+                  <div class="policy-img">
+                    <img src="../../assets/policy/4.jpg" alt="P1">
+                  </div>
+                  <h2>CAPTAIN AMERICAN</h2>
+                  <p>CAPTAIN AMERICAN là nhân vật rất nổi tiếng, vì vậy nhân vật này có rất nhiều dòng figure rất đẹp và đa dạng về nó</p>
+                  <a routerLink="/productall" class="read-more">Xem Nhiều Hơn <i class="fa fa-caret-right"></i></a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="policy-p-card">
+                  <div class="date">
+                    <h3>25</h3>
+                    <h4>Jun</h4>
+                  </div>
+                  <div class="policy-img">
+                    <img src="../../assets/policy/5.jpg" alt="P1">
+                  </div>
+                  <h2>DOCTOR STRANGE</h2>
+                  <p>DOCTOR STRANGE là nhân vật cực kì phong phú trong thế giới mô hình nhờ những vũ khí của 1 phù thủy, vì vậy nhân vật này có rất nhiều dòng figure rất đẹp và đa dạng về nó</p>
+                  <a routerLink="/productall" class="read-more">Xem Nhiều Hơn <i class="fa fa-caret-right"></i></a>
+                </div>
+              </ng-template>   
+            </owl-carousel-o>
+          </div>
+        </div>
+  </section>
+  
+  <!-- Partners q -->
+  <section class="partners">
+      <div class="containers">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide *ngFor="let partnersArrays of partnersArray"><img src="{{partnersArrays.imgName}}" alt="Partner"></ng-template>  
+        </owl-carousel-o>
+        </div>
+  </section>
+  
+  <section class="footer-top">
+      <div class="containers">
+          <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-logo">
+                      <img src="../../assets/logo" alt="Footer-logo">
+                    </div>
+                    <div class="footer-top-menu">
+                        <ul>
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <span class="heading">Address</span>
+                                <span class="address">12 trịnh đình thảo</span>
+                            </li>
+  
+                            <li>
+                              <i class="fa fa-envelope"></i>
+                              <span class="heading">Mail Us:</span>
+                              <span class="emai">
+                                  <a href="mailto:example@gmail.com">example@gmail.com</a>
+                              </span>
+                          </li>
+                          <li>
+                              <i class="fa fa-phone"></i>
+                              <span class="heading">Phone: </span>
+                              <span class="number">
+                                <a href="tel:1-888-985-6799">1-888-985-6799</a>
+                              </span>
+                          </li>
+                          <li>
+                            <a href="">
+                                <img src="../../assets/payment/1.jpg" style="width: 50px; height: 50px;" alt="Payment">
+                                <img src="../../assets/payment/2.jpg" style="width: 50px; height: 50px;" alt="Payment">
+                                <img src="../../assets/payment/3.jpg" style="width: 50px; height: 50px;" alt="Payment">
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-all-menu">
+                        <h2>My Account</h2>
+                        <ul>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a href="">Information</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a href="">Order History</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a href="">My Wish List</a>
+                            </li>
+                            <li>
+                              <i class="fa fa-circle"></i>
+                              <a href="">Privacy Policy</a>
+                          </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a href="">Site Map</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="footer-all-menu">
+                    <h2>Information </h2> 
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Cart</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Prodcut Support</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">PC Setup & Support</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Services</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Extended Services Plans</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="footer-all-menu">
+                    <h2>Our Services</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Shipping Guide</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Store Location</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Affiliates</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a href="">Customer Point Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+          </div>
+      </div>
+  </section>
+  
+  <section class="footer-middle">
+      <div class="containers">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Sign Up for our exclusive Newsletter</h2>
+            </div>
+            <div class="col-md-4">
+                <input type="mail" class="input" placeholder="Email" />
+                <button type="button"class="btn"><i class="fa-solid fa-location-arrow"></i></button>
+            </div>
+            <div class="col-md-4">
+                <div class="social text-center">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  
+  
+  <footer>
+      <div class="containers text-center">
+          <p>@ 2022 DangQuangMinh designed by <a href="">Creative Developer</a> All Rights Reserve</p>
+      </div>
+  </footer>
+  
+  
+  
+   
+  
+  
+  

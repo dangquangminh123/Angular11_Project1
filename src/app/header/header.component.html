@@ -1,0 +1,84 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="language">
+                    <ul>
+                        <li (click)="drop('language')">
+                            English <i class="fa fa-caret-down"></i>
+                            <div class="dropdown" *ngIf="id === 'language'">
+                                <ul>
+                                    <li>
+                                        English
+                                    </li>
+                                    <li>
+                                        Japan
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li (click)="drop('currency')">
+                            USD <i class="fa fa-caret-down"></i>
+                            <div class="dropdown" *ngIf="id === 'currency'">
+                                <ul>
+                                    <li>
+                                        USD
+                                    </li>
+                                    <li>
+                                        Yên
+                                    </li>
+                                    <li>
+                                        GBP
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="social-menu">
+                    <ul>
+                        <li>
+                            <a routerLink="/">Trang Chủ</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-brands fa-google-plus"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/signup" class="login">Đăng Ký</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12 text-right">
+                    <div class="cart_icon" routerLink="/cart">
+                        <i class="fa fa-shopping-cart" ></i>
+                        <div class="cart_value">
+                            {{cartItem}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,41 @@
+<app-header></app-header>
+<section class="cart_section">
+        <div class="container">
+            <h2>Thông Tin Giỏ Hàng</h2>
+            <div *ngIf="getCartDetails">
+                <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Sub Total</th>
+                    <th>Remove Item</th>
+                </tr>
+                <tr *ngFor="let getCartDetail of getCartDetails">
+                    <td><img src="{{getCartDetail.img}}" style="width: 150px; height: 150px" alt="Product1"></td>
+                    <td>${{getCartDetail.price}}</td>
+                    <td>
+                        <div class="content">
+                            <button type="button" class="btn" (click)="intQuantity(getCartDetail.prodId, getCartDetail.quantity)"><i class="fa fa-plus"></i></button>
+                            <span>{{getCartDetail.quantity}}</span>
+                            <button type="button" class="btn" (click)="decQuantity(getCartDetail.prodId, getCartDetail.quantity)"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </td>
+                    <td>$ {{getCartDetail.quantity * getCartDetail.price | number}}</td>
+                    <td><button type="button" class="delete" (click)="singleDelete(getCartDetail.prodId)"><i class="fa fa-trash"></i></button></td>
+                </tr>
+                </table>
+
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Tổng Tiền $ {{total}}</h3>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <button type="button" class="removeall" (click)="removeall()"><i class="fa fa-trash"></i>Xóa Toàn Bộ</button>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</section>

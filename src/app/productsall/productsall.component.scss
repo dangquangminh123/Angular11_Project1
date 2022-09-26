@@ -1,0 +1,114 @@
+.product{
+    padding: 40px 0;
+}
+
+.box{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.product_image img{
+    width: 150px;
+    height: 200px;
+}
+.content h4{
+    margin-top: 10px;
+}
+
+.btn{
+    background: rgb(94, 0, 0);
+    border-radius: 50%;
+    font-size: 16px;
+    color: #fff;
+    margin: 0 8px;
+}
+
+.content span{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.cart_btn{
+    border-radius: 4px;
+    background: rgb(94, 0, 0);
+    border: 1px solid rgb(94, 0, 0);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 4px 16px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.cart_btn:hover{
+    color: rgb(94, 0, 0);
+    background: transparent;
+    border: 1px solid rgb(94, 0, 0);
+}
+
+.black-border{
+    border: 1px solid black;
+}
+
+main {
+    width: 90%;
+    margin: 3rem auto 0px;
+}
+
+.toolbar{
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-employee {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-employees {
+    width: 50%;
+    height: 90%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.5);
+}
+
+.search-employees input {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+}
+
+
+._ul_checkbox ul {
+    padding: 0;
+    margin: 0;
+} 
+
+._ul_checkbox ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+._ul_checkbox ul li input {
+    margin-right: 4px;
+}
+
+._ul_product ul{
+    padding: 0;
+    margin: 0;
+}
+
+._ul_product ul li{
+    list-style-type: none;
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 10px;
+}
